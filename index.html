@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evegrow.Digital – Dari Rumah Tetap Bisa Berpenghasilan</title>
+<meta name="description" content="Worksheet & game edukatif anak, course produk digital.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#E3D5FA; --card:#F5F0FF; --line:#E4D4FA;
+    --purple:#7B2CBF; --purple-2:#A66BD4; --ink:#5B2D91; --text:#51445F;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);font-family:'Poppins',sans-serif !important;color:var(--text)}
+  *,*::before,*::after,button,summary,a,p,h2,span,div,details,b,input{font-family:'Poppins',sans-serif !important}
+  .page{max-width:600px;margin:auto;padding:0 0 100px}
+  .page>img{width:100%;height:auto}
+  img{display:block}
+
+  /* ---------- Gambar + hotspot klik ---------- */
+  .banner{position:relative;width:100%}
+  .banner img{width:100%;height:auto}
+  .hotspot{
+    position:absolute;
+    top:var(--top);left:var(--left);
+    width:var(--w);height:var(--h);
+    transform:translate(-50%,-50%);   /* titik tengah, sama seperti kode Lynk */
+    border-radius:8px;
+    background:transparent;
+  }
+  /* tambahkan ?debug di URL untuk melihat area klik */
+  .debug .hotspot{background:rgba(255,0,0,.25);outline:2px dashed red}
+
+  /* placeholder kalau gambar belum ada */
+  .ph{aspect-ratio:3/4;display:grid;place-items:center;text-align:center;
+      background:repeating-linear-gradient(45deg,#d8c5f5,#d8c5f5 12px,#e3d5fa 12px,#e3d5fa 24px);
+      color:var(--ink);font-size:13px;padding:20px}
+
+  .note{font-size:12px;text-align:center;padding:0 20px;margin:14px 0 0;line-height:1.7}
+  .note b{color:#9c00ff}
+  .swipe{font-size:12px;text-align:center;color:#9c00ff;margin:6px 0 0}
+
+  /* ---------- Carousel ---------- */
+  .carousel{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;
+            -webkit-overflow-scrolling:touch;padding:10px 16px}
+  .carousel::-webkit-scrollbar{display:none}
+  .slide{flex:0 0 100%;scroll-snap-align:start;border-radius:16px;overflow:hidden}
+  .slide img{width:100%;height:auto;border-radius:16px}
+  .dots{display:flex;justify-content:center;gap:6px;margin-top:2px}
+  .dots i{width:7px;height:7px;border-radius:50%;background:#c9aef0;transition:.2s}
+  .dots i.on{background:var(--purple);width:18px;border-radius:8px}
+
+  /* ---------- Tombol ---------- */
+  .btn-wrap{text-align:center;margin:18px 16px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+       width:340px;max-width:100%;padding:17px 18px;border-radius:14px;
+       font-weight:800;font-size:14px;line-height:1.2;text-decoration:none;
+       background:linear-gradient(135deg,var(--purple-2),var(--purple));color:#fff;
+       box-shadow:0 12px 22px -10px rgba(123,44,191,.6);
+       border:1px solid rgba(255,255,255,.35);transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:focus-visible,summary:focus-visible,.wa:focus-visible{outline:3px solid #fff;outline-offset:3px}
+  .btn.soft{background:var(--card);color:#6B35A8;font-weight:600;line-height:1.6;
+            border-color:var(--line);box-shadow:0 2px 6px rgba(91,45,145,.05)}
+  .btn.soft b{color:var(--purple);font-weight:800}
+
+  .label{font-size:14px;color:#424242;margin:18px 22px 6px}
+
+  /* ---------- FAQ ---------- */
+  .faq{padding:0 16px}
+  .faq h2{font-size:16px;color:var(--ink);text-align:center;margin:24px 0 6px}
+  .faq .sub{font-size:13px;color:#786887;text-align:center;margin:0 0 22px}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;
+          margin-bottom:12px;padding:18px;box-shadow:0 2px 6px rgba(91,45,145,.05)}
+  summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+          cursor:pointer;font-weight:600;font-size:14px;color:#6B35A8;line-height:1.6}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"⌄";font-size:20px;color:#8B5BC2;transition:transform .2s}
+  details[open] summary::after{transform:rotate(180deg)}
+  details div{margin-top:12px;font-size:13px;line-height:1.8}
+
+  /* ---------- Footer & WhatsApp ---------- */
+  footer{margin-top:40px;padding:0 16px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center}
+  footer a{color:var(--ink);font-size:13px}
+  .wa{position:fixed;right:16px;bottom:16px;width:60px;height:60px;border-radius:50%;
+      background:#1fa83a;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.3);z-index:10}
+  .wa svg{width:32px;height:32px;fill:#fff}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 1. HERO + tombol "Lihat detail" -->
+  <div class="banner">
+    <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792045670661_3026038.png?width=630&quality=90&format=webp" alt="Dari rumah tetap bisa berpenghasilan">
+    <a class="hotspot" href="https://lynk.id/mialynna/page/belajar-ngonten" aria-label="Lihat detail"
+       style="--top:25%;--left:26%;--w:35%;--h:15%"></a>
+  </div>
+
+  <p class="note">Aku Ibu Anak 1 (Toddler). Aku buktikan kalau IRT yang fulltime di rumah dan tinggal di kampung tetap bisa punya penghasilan tanpa ninggalin anak. Dan dengan keterbatasan aku menghasilkan <b>10JUTA</b> dengan menjual worksheet dan game edukatif anak.</p>
+  <p class="swipe">Geser ke samping →</p>
+
+  <!-- 2. CAROUSEL -->
+  <div class="carousel" id="carousel">
+    <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792029942235_5411413.png?width=630&quality=90&format=webp" alt="Bukti 1" loading="lazy"></div>
+    <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792030030700_7277529.png?width=630&quality=90&format=webp" alt="Bukti 2" loading="lazy"></div>
+    <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792030056790_5693879.png?width=630&quality=90&format=webp" alt="Bukti 3" loading="lazy"></div>
+    <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792030082708_8057883.png?width=630&quality=90&format=webp" alt="Bukti 4" loading="lazy"></div>
+  </div>
+  <div class="dots" id="dots"></div>
+
+  <!-- 3. Gambar -->
+  <img src="https://cdn.lynkid.my.id/draft-products/14-10-2026/1791952879416_4898514.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <img src="https://cdn.lynkid.my.id/draft-products/14-10-2026/1791951453600_7406324.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+
+  <!-- 4. Tombol -->
+  <div class="btn-wrap"><a class="btn" href="https://testimonievegrowdigital.vercel.app/" target="_blank" rel="noopener">INI KATA MEREKA →</a></div>
+  <div class="btn-wrap"><a class="btn" href="http://lynk.id/mialynna/oyre8w99rl0y" target="_blank" rel="noopener">KURSUS GRATIS →</a></div>
+  <div class="btn-wrap"><a class="btn soft" href="http://lynk.id/mialynna/38we8d96j05g" target="_blank" rel="noopener">
+    <span>Kalau kamu butuh pendampingan biar belajar dan praktek <b>lebih cepat</b> dan <b>tepat</b></span></a></div>
+
+  <!-- 5. Private Course + tombol "Lihat detail" -->
+  <div class="banner">
+    <img src="https://cdn.lynkid.my.id/draft-products/14-10-2026/1791950608963_2581006.png?width=630&quality=90&format=webp" alt="Private Course 1:1" loading="lazy">
+    <a class="hotspot" href="http://lynk.id/mialynna/38we8d96j05g" aria-label="Lihat detail" style="--top:79%;--left:27%;--w:32%;--h:18%"></a>
+  </div>
+
+  <!-- 6. Pilih yang kamu butuhkan: 2 tombol "Klik disini" -->
+  <p class="label">Pilih yang kamu butuhkan ↓</p>
+  <div class="banner">
+    <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792031360637_1729359.png?width=630&quality=90&format=webp" alt="Media belajar anak dan E-course" loading="lazy">
+    <a class="hotspot" href="https://lynk.id/mialynna/page/media-belajar-anak" aria-label="Media belajar anak" style="--top:83%;--left:24%;--w:28%;--h:15%"></a>
+    <a class="hotspot" href="https://lynk.id/mialynna/page/belajar-ngonten" aria-label="E-course produk digital" style="--top:83%;--left:75.5%;--w:28%;--h:15%"></a>
+  </div>
+
+  <div class="btn-wrap"><a class="btn" href="https://lynk.id/mialynna/page/produk-digital-lainnya" target="_blank" rel="noopener">LIHAT PRODUK DIGITAL LAINNYA →</a></div>
+
+  <!-- 7. Gambar penjelasan -->
+  <img src="https://cdn.lynkid.my.id/draft-products/14-10-2026/1791941054944_6986232.png?width=630&quality=90&format=webp" alt="Untuk menjalankan bisnis produk digital" loading="lazy">
+  <img src="https://cdn.lynkid.my.id/draft-products/14-10-2026/1791941074043_6164182.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792031590849_5527774.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792040985719_9510842.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792041012033_9875996.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792041041811_1515293.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+
+  <!-- 7. FAQ -->
+  <section class="faq">
+    <h2>Masih Bingung? Cek Dulu Yuk! 💜</h2>
+    <p class="sub">Siapa tahu ini juga yang lagi kamu tanyain ✨</p>
+
+    <details><summary>Kak, aku nggak jago desain, bisa ikut nggak?</summary>
+      <div>Bisa banget, kak! 🥰 Kita belajar bikin produk pakai Canva+AI, jadi kamu bisa mulai pelan-pelan sambil praktik.</div></details>
+    <details><summary>Kalau belum punya produk buat dijual gimana, kak?</summary>
+      <div>Tenang, kamu juga dapat produk digital siap jual kembali 💜 Jadi bisa mulai jualan tanpa bikin semuanya dari nol.</div></details>
+    <details><summary>Di E-course belajar apa aja sih?</summary>
+      <div>Bikin produk digital pakai Canva+AI, cara jualannya, sampai animasi AI dan Affiliate. Ada bonus template juga ✨</div></details>
+    <details><summary>Aku cuma punya HP, bisa ikut nggak?</summary>
+      <div>Bisa kok, kak! 🥰 Canva bisa dipakai lewat HP. Beberapa fitur lebih nyaman di laptop, tapi kamu tetap bisa mulai.</div></details>
+    <details><summary>Kalau ikut Private Course, bisa langsung menghasilkan uang?</summary>
+      <div>E-course ini jadi langkah awal bisnis produk digital 💜 Kamu belajar skill dan cara jualan, tapi hasil tiap orang berbeda tergantung usaha, strategi, dan konsistensi.</div></details>
+  </section>
+
+  <footer>
+    <a href="https://contoh.com/ketentuan-layanan">Ketentuan Layanan</a>
+    <a href="https://contoh.com/kebijakan-privasi">Kebijakan Privasi</a>
+    <a href="https://contoh.com/kebijakan-retur-dana">Kebijakan Retur Dana</a>
+    <a href="https://contoh.com/kebijakan-pengiriman">Kebijakan Pengiriman</a>
+  </footer>
+
+</div>
+
+<!-- Tombol WhatsApp melayang: ganti 628xxxxxxxxxx dengan nomor kamu -->
+<a class="wa" href="https://wa.me/628xxxxxxxxxx?text=Halo%20kak,%20aku%20mau%20tanya" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.600L3 29l7.100-2.100c1.800 1 3.800 1.500 5.900 1.500 7 0 12.700-5.600 12.700-12.500S23 3 16 3zm6.500 17.500c-.3.800-1.600 1.500-2.200 1.600-.6.100-1.300.1-2.100-.1-.5-.2-1.200-.4-2-.8-3.500-1.500-5.800-5-6-5.300-.2-.2-1.400-1.900-1.400-3.600s.9-2.500 1.200-2.900c.3-.3.700-.4.900-.4h.7c.2 0 .5-.1.800.6.300.7 1 2.500 1.100 2.700.1.200.1.400 0 .600-.1.200-.2.400-.4.600l-.6.700c-.2.200-.4.400-.2.800.2.400 1 1.600 2.100 2.600 1.400 1.200 2.600 1.600 3 1.800.4.200.6.100.8-.1.200-.3 1-1.100 1.300-1.500.3-.4.500-.3.900-.2.400.1 2.300 1.100 2.700 1.300.4.200.6.300.7.400.1.200.1.800-.2 1.500z"/></svg>
+</a>
+
+<script>
+  // Mode debug: buka index.html?debug untuk melihat area klik hotspot
+  if (location.search.includes('debug')) document.body.classList.add('debug');
+
+  // Indikator titik untuk carousel
+  const c = document.getElementById('carousel'), d = document.getElementById('dots');
+  const n = c.children.length;
+  for (let i = 0; i < n; i++) d.appendChild(document.createElement('i'));
+  const upd = () => {
+    const i = Math.round(c.scrollLeft / c.clientWidth);
+    [...d.children].forEach((el, k) => el.classList.toggle('on', k === i));
+  };
+  c.addEventListener('scroll', upd, {passive:true}); upd();
+</script>
+</body>
+  </html>
+  

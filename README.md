@@ -1,16 +1,19 @@
-## Hi there 👋
+# Landing page (HTML + gambar + hotspot klik)
 
-<!--
-**evegrowdigital/Evegrowdigital** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Struktur
+```
+index.html
+vercel.json
+images/   <- taruh gambarmu di sini
+  hero.png, bukti-1..4.png, kenapa.png, cta.png, private-course.png, pilih.png
+```
 
-Here are some ideas to get you started:
+## Cara pasang hotspot (overlay klik)
+Setiap `<a class="hotspot" style="--top:25%;--left:26%;--w:35%;--h:15%">`:
+- `--top` / `--left` = posisi TITIK TENGAH tombol di gambar (%)
+- `--w` / `--h` = ukuran area klik (%)
+Buka `index.html?debug` untuk melihat kotak merah area klik.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Deploy
+1. Buat repo GitHub baru, upload semua file (termasuk folder images).
+2. vercel.com > Add New > Project > import repo > Deploy. (Framework: Other, tanpa build command)

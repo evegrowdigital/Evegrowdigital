@@ -71,7 +71,19 @@
        box-shadow:0 12px 22px -10px rgba(123,44,191,.6);
        border:1px solid rgba(255,255,255,.35);transition:transform .15s}
   .btn:hover{transform:translateY(-2px)}
-  .btn:focus-visible,summary:focus-visible,.wa:focus-visible{outline:3px solid #fff;outline-offset:3px}
+  .btn:focus-visible,.go:focus-visible,summary:focus-visible,.wa:focus-visible{outline:3px solid #fff;outline-offset:3px}
+  .promo-box{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;
+       width:340px;max-width:100%;margin:0 auto;padding:20px 18px;border-radius:14px;color:#fff;
+       background:linear-gradient(135deg,var(--purple-2),var(--purple));
+       box-shadow:0 12px 22px -10px rgba(123,44,191,.6);border:1px solid rgba(255,255,255,.35)}
+  .promo-box .t{font-size:14px;font-weight:800;line-height:1.4}
+  .promo-box .p{font-size:13px;font-weight:700;line-height:1.5}
+  .promo-box .p s{opacity:.8}
+  .promo-box .b{font-size:12px;font-weight:500;line-height:1.6;opacity:.95}
+  .promo-box .go{display:flex;align-items:center;justify-content:center;width:100%;margin-top:6px;padding:14px 16px;
+       border-radius:12px;background:var(--card);color:#6B35A8;font-weight:800;font-size:14px;
+       text-decoration:none;border:1px solid var(--line);box-shadow:0 2px 6px rgba(91,45,145,.05);transition:transform .15s}
+  .promo-box .go:hover{transform:translateY(-2px)}
   .btn.soft{background:var(--card);color:#6B35A8;font-weight:600;line-height:1.6;
             border-color:var(--line);box-shadow:0 2px 6px rgba(91,45,145,.05)}
   .btn.soft b{color:var(--purple);font-weight:800}
@@ -95,7 +107,7 @@
   footer{margin-top:40px;padding:0 var(--pad);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center}
   footer a{color:var(--ink);font-size:13px}
   .wa{position:fixed;right:16px;bottom:16px;width:60px;height:60px;border-radius:50%;
-      background:#1fa83a;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.3);z-index:10}
+      background:#1fa83a;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.3);z-index:99999;pointer-events:auto;cursor:pointer}
   .wa svg{width:32px;height:32px;fill:#fff}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 
@@ -106,6 +118,7 @@
       opacity:0;transition:opacity 2.5s ease;will-change:transform;
       filter:drop-shadow(0 0 6px rgba(166,107,212,.55)) drop-shadow(0 3px 5px rgba(123,44,191,.25))}
   .bf.show{opacity:var(--o,.95)}
+  .butterflies,.butterflies *{pointer-events:none !important}
   .bf svg{width:100%;height:100%;overflow:visible}
   .bf .wing{transform-box:fill-box;animation:flap var(--f,.5s) ease-in-out infinite alternate}
   .bf .wing.l{transform-origin:100% 50%}
@@ -125,10 +138,16 @@
 <div class="page">
 
   <!-- 1. Gambar pembuka -->
-  <img src="https://cdn.lynkid.my.id/draft-products/18-10-2026/1792342244623_1739219.png?width=630&quality=90&format=webp" alt="Evegrow.Digital">
+  <div class="banner">
+    <img src="https://cdn.lynkid.my.id/draft-products/18-10-2026/1792342244623_1739219.png?width=630&quality=90&format=webp" alt="Evegrow.Digital">
+    <a class="hotspot" href="https://wa.me/6285750232420?text=Halo%20kak,%20aku%20mau%20tanya" target="_blank" rel="noopener" aria-label="WhatsApp" style="--top:38.63%;--left:23.05%;--w:14%;--h:3.7%"></a>
+    <a class="hotspot" href="https://www.instagram.com/evegrow.digital" target="_blank" rel="noopener" aria-label="Instagram" style="--top:38.63%;--left:41.75%;--w:14%;--h:3.7%"></a>
+    <a class="hotspot" href="https://www.tiktok.com/@evegrowdigital" target="_blank" rel="noopener" aria-label="TikTok" style="--top:38.63%;--left:59.7%;--w:14%;--h:3.7%"></a>
+    <a class="hotspot" href="https://www.threads.com/@evegrow.digital" target="_blank" rel="noopener" aria-label="Threads" style="--top:38.63%;--left:77.3%;--w:14%;--h:3.7%"></a>
+  </div>
 
   <!-- 2. Tombol -->
-  <div class="btn-wrap"><a class="btn" href="http://lynk.id/mialynna/oyre8w99rl0y" target="_blank" rel="noopener">KURSUS GRATIS →</a></div>
+  <div class="btn-wrap"><a class="btn" href="https://lynk.id/mialynna" target="_blank" rel="noopener">KURSUS GRATIS →</a></div>
   <div class="btn-wrap"><a class="btn soft" href="http://lynk.id/mialynna/38we8d96j05g" target="_blank" rel="noopener">
     <span>Kalau kamu butuh pendampingan biar belajar dan praktek <b>lebih cepat</b> dan <b>tepat</b></span></a></div>
 
@@ -149,6 +168,16 @@
     <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792030082708_8057883.png?width=630&quality=90&format=webp" alt="Bukti 4" loading="lazy"></div>
   </div>
   <div class="dots" id="dots"></div>
+
+  <!-- Tombol Mega Bundling -->
+  <div class="btn-wrap">
+    <div class="promo-box">
+      <span class="t">MEGA BUNDLING WORKSHEET ANAK 4000+ HAL</span>
+      <span class="p">PROMO dari <s>249K</s> terbatas untuk 5 orang aja jadi 69K aja!</span>
+      <span class="b">BONUS 150 File PDF Worksheet Anak, 9 Games Edukatif, Cara Buka toko digital dan Cara Promosi</span>
+      <a class="go" href="https://lynk.id/mialynna/mgxweorw50xm" target="_blank" rel="noopener">Ambil Promo →</a>
+    </div>
+  </div>
 
   <!-- 5. Testimoni -->
   <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792346607549_8839188.png?width=630&quality=90&format=webp" alt="Testimoni" loading="lazy">
@@ -285,15 +314,4 @@
         b.el.style.transform = `translate3d(${b.x}px,${b.y}px,0) rotate(${b.th*180/Math.PI + 90 + roll}deg)`;
         // kepakan sayap: kadang cepat, kadang melayang pelan
         const g = .5 + .5*Math.sin(b.t*.8 + b.glide);
-        b.el.style.setProperty('--f', (b.f + g*.28).toFixed(2)+'s');
-        // jejak glitter
-        b.sp += dt;
-        if (b.sp > .16){ b.sp = 0; if (box.childElementCount < 70) sparkle(b); }
-      });
-      requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  })();
-</script>
-</body>
-</html>
+        b.el.style.setProperty('--f', (b.f + g*.28).toFixed(2)+'

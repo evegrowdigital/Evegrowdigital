@@ -12,27 +12,20 @@
   :root{
     --bg:#e3d6fd; --card:#F5F0FF; --line:#E4D4FA;
     --purple:#7B2CBF; --purple-2:#A66BD4; --ink:#5B2D91; --text:#51445F;
-    --gap:14px; /* jarak tepi kiri-kanan */
+    --gap:0px; /* jarak tepi gambar: 0 = penuh */
+    --pad:16px; /* jarak tepi khusus teks, FAQ & footer */
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;position:relative;background:var(--bg);font-family:'Poppins',sans-serif !important;color:var(--text)}
   *,*::before,*::after,button,summary,a,p,h2,span,div,details,b,input{font-family:'Poppins',sans-serif !important}
-  .page{max-width:600px;margin:auto;padding:0 var(--gap) 100px}
-  .page>img{width:100%;height:auto;border-radius:14px}
+  .page{max-width:600px;margin:auto;padding:0 0 100px}
+  .page>img{width:100%;height:auto}
   img{display:block}
-
-  /* ---------- Header profil ---------- */
-  .top{margin:0 calc(var(--gap) * -1)}
-  .top-banner{width:100%;height:auto}
-  .profile{text-align:center;padding:36px 30px 8px}
-  .profile .fp{width:90px;height:90px;border-radius:50%;object-fit:cover;margin:0 auto}
-  .profile .username{margin:14px 0 6px;font-size:15px;font-weight:700;color:#3d3d3d}
-  .profile .bio{margin:0;font-size:15px;line-height:1.75;color:#3d3d3d}
 
   /* ---------- Gambar + hotspot klik ---------- */
   .banner{position:relative;width:100%}
-  .banner img{width:100%;height:auto;border-radius:14px}
+  .banner img{width:100%;height:auto}
   .hotspot{
     position:absolute;
     top:var(--top);left:var(--left);
@@ -54,22 +47,22 @@
     50%{transform:rotate(0deg) scale(1)}
   }
 
-  .note{font-size:12px;text-align:left;padding:0 6px;margin:14px 0 0;line-height:1.7}
+  .note{font-size:12px;text-align:left;padding:0 var(--pad);margin:14px 0 0;line-height:1.7}
   .note b{color:#9c00ff}
-  .swipe{font-size:12px;text-align:left;padding:0 6px;color:#9c00ff;margin:6px 0 0}
+  .swipe{font-size:12px;text-align:left;padding:0 var(--pad);color:#9c00ff;margin:6px 0 0}
 
   /* ---------- Carousel ---------- */
-  .carousel{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;
+  .carousel{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;
             -webkit-overflow-scrolling:touch;padding:10px 0}
   .carousel::-webkit-scrollbar{display:none}
-  .slide{flex:0 0 100%;scroll-snap-align:start;border-radius:16px;overflow:hidden}
-  .slide img{width:100%;height:auto;border-radius:16px}
+  .slide{flex:0 0 100%;scroll-snap-align:start;overflow:hidden}
+  .slide img{width:100%;height:auto}
   .dots{display:flex;justify-content:center;gap:6px;margin:2px 0 10px}
   .dots i{width:7px;height:7px;border-radius:50%;background:#c9aef0;transition:.2s}
   .dots i.on{background:var(--purple);width:18px;border-radius:8px}
 
   /* ---------- Tombol ---------- */
-  .btn-wrap{text-align:center;margin:18px 0}
+  .btn-wrap{text-align:center;margin:18px var(--pad)}
   .btn-wrap.space{margin-bottom:44px} /* ruang ekstra supaya shadow tidak terlihat garis */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
        width:340px;max-width:100%;padding:17px 18px;border-radius:14px;
@@ -86,7 +79,7 @@
   .label{font-size:14px;color:#424242;margin:18px 6px 6px}
 
   /* ---------- FAQ ---------- */
-  .faq{padding:0}
+  .faq{padding:0 var(--pad)}
   .faq h2{font-size:16px;color:var(--ink);text-align:center;margin:24px 0 6px}
   .faq .sub{font-size:13px;color:#786887;text-align:center;margin:0 0 22px}
   details{background:var(--card);border:1px solid var(--line);border-radius:12px;
@@ -99,7 +92,7 @@
   details div{margin-top:12px;font-size:13px;line-height:1.8}
 
   /* ---------- Footer & WhatsApp ---------- */
-  footer{margin-top:40px;padding:0;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center}
+  footer{margin-top:40px;padding:0 var(--pad);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:center}
   footer a{color:var(--ink);font-size:13px}
   .wa{position:fixed;right:16px;bottom:16px;width:60px;height:60px;border-radius:50%;
       background:#1fa83a;display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.3);z-index:10}
@@ -131,27 +124,24 @@
 <body>
 <div class="page">
 
-  <!-- 0. BANNER ATAS + FOTO PROFIL + BIO -->
-  <div class="top">
-    <img class="top-banner" src="/Ba.png" alt="Welcome to Evegrow.Digital">
-    <div class="profile">
-      <img class="fp" src="/Fp.jpg" alt="Foto profil @mialynna">
-      <p class="username">@mialynna</p>
-      <p class="bio">Ubah Gadget jadi Sumber Cuan💸 | Worksheet &amp; Games Edukatif | Course Cuan Produk Digital</p>
-    </div>
+  <!-- 1. Gambar pembuka -->
+  <img src="https://cdn.lynkid.my.id/draft-products/18-10-2026/1792342244623_1739219.png?width=630&quality=90&format=webp" alt="Evegrow.Digital">
+
+  <!-- 2. Tombol -->
+  <div class="btn-wrap"><a class="btn" href="http://lynk.id/mialynna/oyre8w99rl0y" target="_blank" rel="noopener">KURSUS GRATIS →</a></div>
+  <div class="btn-wrap"><a class="btn soft" href="http://lynk.id/mialynna/38we8d96j05g" target="_blank" rel="noopener">
+    <span>Kalau kamu butuh pendampingan biar belajar dan praktek <b>lebih cepat</b> dan <b>tepat</b></span></a></div>
+
+  <!-- 3. Private Course (bergoyang) + tombol "Lihat detail" -->
+  <div class="banner wiggle">
+    <img src="https://cdn.lynkid.my.id/draft-products/14-10-2026/1791950608963_2581006.png?width=630&quality=90&format=webp" alt="Private Course 1:1" loading="lazy">
+    <a class="hotspot" href="http://lynk.id/mialynna/38we8d96j05g" aria-label="Lihat detail" style="--top:79%;--left:27%;--w:32%;--h:18%"></a>
   </div>
 
-  <!-- 1. HERO + tombol "Lihat detail" -->
-  <div class="banner" style="margin-top:20px">
-    <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792045670661_3026038.png?width=630&quality=90&format=webp" alt="Dari rumah tetap bisa berpenghasilan">
-    <a class="hotspot" href="https://lynk.id/mialynna/page/belajar-ngonten" aria-label="Lihat detail"
-       style="--top:25%;--left:26%;--w:35%;--h:15%"></a>
-  </div>
+  <!-- 4. Cerita + carousel -->
+  <p class="note">Aku Ibu Anak 1 (Toddler). Aku buktikan kalau IRT yang Fulltime dirumah aja dan tinggal di kampung tetap bisa punya penghasilan tanpa ninggalin anak. Dan dengan keterbatasan aku menghasilkan <b>10JUTA</b> hanya dengan Worksheet dan Game Edukatif Anak.</p>
+  <p class="swipe">Produk Best Seller Geser kesamping →</p>
 
-  <p class="note">Aku Ibu Anak 1 (Toddler). Aku buktikan kalau IRT yang fulltime di rumah dan tinggal di kampung tetap bisa punya penghasilan tanpa ninggalin anak. Dan dengan keterbatasan aku menghasilkan <b>10JUTA</b> dengan menjual worksheet dan game edukatif anak.</p>
-  <p class="swipe">Geser ke samping →</p>
-
-  <!-- 2. CAROUSEL -->
   <div class="carousel" id="carousel">
     <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792029942235_5411413.png?width=630&quality=90&format=webp" alt="Bukti 1" loading="lazy"></div>
     <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792030030700_7277529.png?width=630&quality=90&format=webp" alt="Bukti 2" loading="lazy"></div>
@@ -160,48 +150,30 @@
   </div>
   <div class="dots" id="dots"></div>
 
+  <!-- 5. Testimoni -->
+  <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792346607549_8839188.png?width=630&quality=90&format=webp" alt="Testimoni" loading="lazy">
+  <div class="btn-wrap"><a class="btn" href="https://testimonievegrowdigital.vercel.app/" target="_blank" rel="noopener">LIHAT TESTIMONI LEBIH BANYAK →</a></div>
 
-  <!-- 4. Tombol -->
-  <div class="btn-wrap"><a class="btn" href="https://testimonievegrowdigital.vercel.app/" target="_blank" rel="noopener">INI KATA MEREKA →</a></div>
-  <div class="btn-wrap"><a class="btn" href="http://lynk.id/mialynna/oyre8w99rl0y" target="_blank" rel="noopener">KURSUS GRATIS →</a></div>
-  <div class="btn-wrap"><a class="btn soft" href="http://lynk.id/mialynna/38we8d96j05g" target="_blank" rel="noopener">
-    <span>Kalau kamu butuh pendampingan biar belajar dan praktek <b>lebih cepat</b> dan <b>tepat</b></span></a></div>
+  <!-- 6. Gambar penjelasan -->
+  <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792346810139_8803319.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792345934745_1946985.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792345969482_6186745.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
 
-  <!-- 5. Private Course (bergoyang) + tombol "Lihat detail" -->
-  <div class="banner wiggle">
-    <img src="https://cdn.lynkid.my.id/draft-products/14-10-2026/1791950608963_2581006.png?width=630&quality=90&format=webp" alt="Private Course 1:1" loading="lazy">
-    <a class="hotspot" href="http://lynk.id/mialynna/38we8d96j05g" aria-label="Lihat detail" style="--top:79%;--left:27%;--w:32%;--h:18%"></a>
-  </div>
-
-  <!-- 6. Pilih yang kamu butuhkan -->
-  <p class="label">Pilih yang kamu butuhkan ↓</p>
-  <div class="banner">
-    <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792031360637_1729359.png?width=630&quality=90&format=webp" alt="Media belajar anak dan E-course" loading="lazy">
-    <a class="hotspot" href="https://lynk.id/mialynna/page/media-belajar-anak" aria-label="Media belajar anak" style="--top:83%;--left:24%;--w:28%;--h:15%"></a>
-    <a class="hotspot" href="https://lynk.id/mialynna/page/belajar-ngonten" aria-label="E-course produk digital" style="--top:83%;--left:75.5%;--w:28%;--h:15%"></a>
-  </div>
-
-  <div class="btn-wrap space"><a class="btn" href="https://lynk.id/mialynna/page/produk-digital-lainnya" target="_blank" rel="noopener">LIHAT PRODUK DIGITAL LAINNYA →</a></div>
-
-  <!-- 7. Gambar penjelasan -->
-  <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792041012033_9875996.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
-  <img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792041041811_1515293.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
-
-  <!-- 8. FAQ -->
+  <!-- 7. FAQ -->
   <section class="faq">
     <h2>Masih Bingung? Cek Dulu Yuk! 💜</h2>
     <p class="sub">Siapa tahu ini juga yang lagi kamu tanyain ✨</p>
 
     <details><summary>Kak, aku nggak jago desain, bisa ikut nggak?</summary>
-      <div>Bisa banget, kak! 🥰 Kita belajar bikin produk pakai Canva+AI, jadi kamu bisa mulai pelan-pelan sambil praktik.</div></details>
+      <div>Bisa banget, kak!🥰 Kamu nggak harus jago desain dulu kok. Kita belajar bikin produk pakai Canva+AI, jadi kamu bisa mulai pelan-pelan sambil praktik.</div></details>
     <details><summary>Kalau belum punya produk buat dijual gimana, kak?</summary>
-      <div>Tenang, kamu juga dapat produk digital siap jual kembali 💜 Jadi bisa mulai jualan tanpa bikin semuanya dari nol.</div></details>
+      <div>Tenanggg, kamu juga bakal dapet produk digital siap jual kembali, lho!💜 Jadi kamu punya pilihan buat mulai jualan tanpa harus bikin semuanya dari nol dulu.</div></details>
     <details><summary>Di E-course belajar apa aja sih?</summary>
-      <div>Bikin produk digital pakai Canva+AI, cara jualannya, sampai animasi AI dan Affiliate. Ada bonus template juga ✨</div></details>
+      <div>Kamu bakal belajar bikin produk digital pakai Canva+AI, cara jualannya, sampai eksplorasi animasi AI dan Affiliate. Ada bonus template juga yang bisa kamu manfaatin biar proses bikin produk jadi lebih praktis✨</div></details>
     <details><summary>Aku cuma punya HP, bisa ikut nggak?</summary>
-      <div>Bisa kok, kak! 🥰 Canva bisa dipakai lewat HP. Beberapa fitur lebih nyaman di laptop, tapi kamu tetap bisa mulai.</div></details>
+      <div>Bisa kok, kak! 🥰 Kamu bisa mulai belajar Canva lewat HP. Beberapa fitur mungkin lebih nyaman dipakai lewat laptop, tapi kamu tetap bisa mulai belajar dari perangkat yang kamu punya. Jujur aku sendiri juga lebih senangnya pake HP.</div></details>
     <details><summary>Kalau ikut Private Course, bisa langsung menghasilkan uang?</summary>
-      <div>E-course ini jadi langkah awal bisnis produk digital 💜 Kamu belajar skill dan cara jualan, tapi hasil tiap orang berbeda tergantung usaha, strategi, dan konsistensi.</div></details>
+      <div>E-coursenya bisa jadi langkah awal kamu buat mulai bisnis produk digital, biar ngk bingung harus apa dulu kak💜 Kamu bakal belajar skill dan cara jualannya, tapi hasil setiap orang berbeda, tergantung usaha, strategi, dan konsistensi masing-masing.</div></details>
   </section>
 
   <footer>
@@ -324,5 +296,4 @@
   })();
 </script>
 </body>
-    </html>
-               
+</html>

@@ -7,7 +7,7 @@
 <meta name="description" content="Worksheet & game edukatif anak, course produk digital.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#e3d6fd; --card:#F5F0FF; --line:#E4D4FA;
@@ -18,7 +18,7 @@
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;position:relative;background:var(--bg);font-family:'Poppins',sans-serif !important;color:var(--text)}
-  *,*::before,*::after,button,summary,a,p,h2,span,div,details,b,input{font-family:'Poppins',sans-serif !important}
+  button,summary,input{font-family:inherit}
   .page{max-width:600px;margin:auto;padding:0 0 100px}
   .page>img{width:100%;height:auto}
   img{display:block}
@@ -132,19 +132,171 @@
     100%{opacity:0;transform:translate(calc(var(--x) + var(--dx)),calc(var(--y) + var(--dy))) scale(.1)}
   }
   @media (prefers-reduced-motion:reduce){.butterflies{display:none}}
+
+  /* ================= DESAIN VERSI KODE ================= */
+  .hero,.about{background:#f4effd}
+  .hello{background:#e3d6fd}
+  h1,h2,h3{margin:0;font-weight:400}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:34px 0 26px;text-align:center;overflow:hidden}
+  .hero .logo{width:min(23vw,120px);height:auto;margin:0 auto}
+  .hero .brand{font-size:min(3vw,15px);letter-spacing:.22em;color:#2b2b2b;margin:6px 0 0;font-weight:400}
+  .hero .h1{font-family:'DM Serif Display',serif;font-size:min(11.8vw,70px);line-height:1.04;margin-top:min(5vw,28px);letter-spacing:-.01em}
+  .hero .h1 .d{color:#3b1d7a}
+  .hero .h1 .l{color:#b565e0}
+  .photo-wrap{position:relative;width:59%;margin:min(9vw,50px) auto 0;container-type:inline-size}
+  .photo-wrap .arch{width:100%;aspect-ratio:.945;object-fit:cover;border-radius:999px 999px 0 0}
+  .fcard{position:absolute;background:#fff;border-radius:5cqw;padding:5cqw 5cqw 4.5cqw;text-align:left;
+         box-shadow:0 8px 20px -8px rgba(91,45,145,.35)}
+  .fcard .ic{display:flex;align-items:center;justify-content:center;width:9cqw;height:9cqw;border-radius:50%;
+         background:#efe4fb;color:#a45fd1;margin-bottom:2.2cqw}
+  .fcard .ic svg{width:58%;height:58%}
+  .fcard b{display:block;font-size:4.5cqw;line-height:1.12;color:#a45fd1;font-weight:700;margin-bottom:1.6cqw}
+  .fcard p{margin:0;font-size:3.7cqw;line-height:1.22;color:#2f2f2f;font-weight:500}
+  .fcard.fl{left:-19cqw;top:4%;width:44cqw;transform:rotate(-8deg)}
+  .fcard.fr{left:79cqw;top:57%;width:40cqw;transform:rotate(8deg)}
+  .socials{display:grid;grid-template-columns:repeat(4,1fr);width:72.5%;margin:min(10vw,56px) auto 0;align-items:center;justify-items:center}
+  .socials a{display:block;width:min(8.4vw,46px);height:min(8.4vw,46px);color:#34248a;transition:transform .15s}
+  .socials a:hover{transform:scale(1.12)}
+  .socials svg{width:100%;height:100%;display:block}
+
+  /* ---------- Hello + dashboard ---------- */
+  .hello{padding:min(7vw,40px) 0 min(8vw,44px)}
+  .hello-row{display:grid;grid-template-columns:36% 1fr;align-items:center;padding:0 3% 0 12%;gap:2%}
+  .hello-row .kartun{width:100%;height:auto}
+  .script{font-family:'Great Vibes',cursive;font-size:min(14.5vw,86px);line-height:1;color:#3b1d7a;margin-left:-4%}
+  .mia{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:min(7vw,40px);color:#161616;margin-top:min(1.5vw,8px);letter-spacing:.02em}
+  .dg{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:min(5.2vw,30px);line-height:1.22;color:#161616;margin-top:2px}
+  .dg span{color:#b068dc}
+
+  .dash{margin:min(5vw,28px) 5% 0;padding:5px;border-radius:12px;background:linear-gradient(180deg,#dcf1e8,#f0f8f4)}
+  .dash-in{background:#fff;border-radius:11px;padding:min(3.5vw,20px) min(3vw,16px) min(2vw,10px);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  .dash-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .dash-top .tt{font-size:min(2.9vw,14px);color:#666;font-weight:500}
+  .dash-top .dt{display:flex;align-items:center;gap:6px;flex:0 0 52%;background:#f4f5f6;border-radius:6px;padding:7px 10px;font-size:min(2.6vw,12px);color:#9a9a9a}
+  .dash-top .dt svg{width:13px;height:13px;flex:none}
+  .legend{display:flex;gap:min(5vw,26px);margin-top:min(3vw,14px)}
+  .legend div{font-size:min(2.6vw,12px);color:#8a8a8a}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px}
+  .legend b{display:block;font-size:min(4vw,19px);color:#2b2b2b;font-weight:600;margin-top:2px}
+  .chart{display:grid;grid-template-columns:min(5.2vw,26px) 1fr;margin-top:6px}
+  .yax{display:flex;flex-direction:column;justify-content:space-between;height:min(48vw,230px);font-size:min(1.9vw,9px);color:#b7b7b7;padding-bottom:1px}
+  .bars{display:flex;align-items:flex-end;height:min(48vw,230px)}
+  .bars .c{flex:1;display:flex;justify-content:center;align-items:flex-end;height:100%}
+  .bars .b{width:min(.95vw,4.5px);min-width:3px;border-radius:3px;background:#f6a62d;position:relative;overflow:hidden}
+  .bars .b i{position:absolute;left:0;right:0;bottom:0;background:#19a774}
+  .xax{display:flex;margin:6px 0 0 min(5.2vw,26px)}
+  .xax span{flex:1;text-align:center;font-size:min(1.55vw,7.5px);line-height:1.2;color:#b0b0b0}
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
+  .tile{background:#fff;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.07);display:flex;align-items:center;gap:6px;padding:min(2vw,10px) min(1.8vw,8px)}
+  .tile .ti{flex:none;width:min(5.2vw,26px);height:min(5.2vw,26px);border-radius:7px;background:#e3f7ee;color:#19a774;display:flex;align-items:center;justify-content:center}
+  .tile .ti svg{width:60%;height:60%}
+  .tile small{display:block;font-size:min(1.9vw,9px);line-height:1.15;color:#9a9a9a}
+  .tile b{display:block;font-size:min(2.9vw,14px);color:#2b2b2b;font-weight:600;line-height:1.2}
+
+  /* ---------- Mau mulai ---------- */
+  .mm{text-align:center;padding:min(9vw,50px) 4% 0}
+  .mm .h2{font-family:'DM Serif Display',serif;font-size:min(7.5vw,44px);line-height:1.08;color:#3b1d7a;letter-spacing:-.01em}
+  .mm .h2 .l{color:#b565e0}
+  .mm .think{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:min(5.6vw,32px);color:#1f1f1f;margin-top:min(5.5vw,30px)}
+  .qs{list-style:none;margin:min(4.5vw,24px) auto 0;padding:0;width:84%;text-align:left}
+  .qs li{display:flex;align-items:center;gap:min(4.5vw,22px);font-family:'Cormorant Garamond',serif;font-weight:500;
+         font-size:min(5vw,29px);line-height:1.2;color:#1c1c1c;padding:min(.9vw,5px) 0}
+  .qs li svg{flex:none;width:min(6.2vw,32px);height:min(6.2vw,32px);color:#c9a9ec}
+  .mm .sure{font-weight:700;font-size:min(4.9vw,27px);line-height:1.08;color:#3b1d7a;margin-top:min(9vw,48px);letter-spacing:-.01em}
+  .mm .just{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:min(9vw,52px);line-height:1.05;color:#a45fd1;margin-top:min(6vw,32px)}
+
+  /* ---------- About Me ---------- */
+  .about{padding:min(5vw,28px) 0 min(9vw,50px);text-align:center}
+  .about .h2{font-family:'DM Serif Display',serif;font-size:min(11vw,64px);color:#3b1d7a;line-height:1.05}
+  .polaroid{position:relative;width:47%;margin:min(6vw,32px) auto 0;background:#f1efec;padding:3.2% 3.2% 15%;box-shadow:0 5px 12px rgba(0,0,0,.22)}
+  .polaroid img{display:block;width:100%;aspect-ratio:1.4;object-fit:cover}
+  .tape{position:absolute;left:50%;top:-5.5%;width:52%;height:min(7vw,38px);transform:translateX(-50%) rotate(-1.5deg);
+        background:linear-gradient(135deg,rgba(214,198,162,.92),rgba(226,212,182,.9));box-shadow:0 1px 3px rgba(0,0,0,.12)}
+  .about .txt{font-size:min(4vw,24px);line-height:1.34;color:#333;padding:0 7%;margin:min(8vw,44px) 0 0}
+
+  /* ---------- Carousel: panah & tanda geser ---------- */
+  .car-wrap{position:relative}
+  .car-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:40px;height:40px;border-radius:50%;border:2px solid rgba(255,255,255,.85);
+           background:rgba(123,44,191,.88);color:#fff;display:grid;place-items:center;cursor:pointer;padding:0;
+           box-shadow:0 4px 12px rgba(91,45,145,.4);transition:opacity .25s}
+  .car-btn svg{width:20px;height:20px}
+  .car-btn.prev{left:8px}
+  .car-btn.next{right:8px;animation:nudgeR 1.4s ease-in-out infinite}
+  .car-btn.prev.pulse{animation:nudgeL 1.4s ease-in-out infinite}
+  .car-btn.off{opacity:0;pointer-events:none}
+  @keyframes nudgeR{0%,100%{transform:translateY(-50%) translateX(0)}50%{transform:translateY(-50%) translateX(6px)}}
+  @keyframes nudgeL{0%,100%{transform:translateY(-50%) translateX(0)}50%{transform:translateY(-50%) translateX(-6px)}}
 </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- 1. Gambar pembuka -->
-  <div class="banner">
-    <img src="https://cdn.lynkid.my.id/draft-products/18-10-2026/1792342244623_1739219.png?width=630&quality=90&format=webp" alt="Evegrow.Digital">
-    <a class="hotspot" href="https://wa.me/6285750232420?text=Halo%20kak,%20aku%20mau%20tanya" target="_blank" rel="noopener" aria-label="WhatsApp" style="--top:38.63%;--left:23.05%;--w:14%;--h:3.7%"></a>
-    <a class="hotspot" href="https://www.instagram.com/evegrow.digital" target="_blank" rel="noopener" aria-label="Instagram" style="--top:38.63%;--left:41.75%;--w:14%;--h:3.7%"></a>
-    <a class="hotspot" href="https://www.tiktok.com/@evegrowdigital" target="_blank" rel="noopener" aria-label="TikTok" style="--top:38.63%;--left:59.7%;--w:14%;--h:3.7%"></a>
-    <a class="hotspot" href="https://www.threads.com/@evegrow.digital" target="_blank" rel="noopener" aria-label="Threads" style="--top:38.63%;--left:77.3%;--w:14%;--h:3.7%"></a>
-  </div>
+  <!-- ================= HERO (kode) ================= -->
+  <section class="hero">
+    <img class="logo" src="/logo.png" alt="Evegrow Digital">
+    <div class="brand">EVEGROW DIGITAL</div>
+    <h1 class="h1"><span class="d">Dari Rumah<br>Tetap Bisa</span><br><span class="l">Berpenghasilan</span></h1>
+
+    <div class="photo-wrap">
+      <img class="arch" src="/foto-mia.jpg" alt="Mia">
+      <div class="fcard fl"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.600 4.300 4.300 0 0 1 19.500 10c0 5.400-7.500 10-7.500 10z"/></svg></span><b>Kamu juga pasti bisa!</b><p>Nggak perlu bingung harus mulai dari mana. Yuk, mulai perjalananmu membangun bisnis produk digital dengan lebih percaya diri.</p></div>
+      <div class="fcard fr"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="14" width="3.4" height="6" rx="1"/><rect x="8.300" y="10" width="3.400" height="10" rx="1"/><rect x="13.600" y="6" width="3.400" height="14" rx="1"/><rect x="18.900" y="3" width="3.400" height="17" rx="1"/></svg></span><b>Punya Skill Bisa Hasilkan Cuan</b><p>Ubah skill yang kamu punya jadi peluang penghasilan lewat produk digital.</p></div>
+    </div>
+
+    <div class="socials">
+      <a href="https://wa.me/6285750232420?text=Halo%20kak,%20aku%20mau%20tanya" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="13" r="12.2" fill="currentColor"/><path d="M2.4 26.2 4.6 18.2l5.8 4.4z" fill="currentColor"/><g transform="translate(4.2 3.2) scale(.8)" fill="#f4effd"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></g></svg></a>
+      <a href="https://www.instagram.com/evegrow.digital" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" aria-hidden="true"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5.4"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.tiktok.com/@evegrowdigital" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://www.threads.com/@evegrow.digital" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 00-2.215-.221z"/></svg></a>
+    </div>
+  </section>
+
+  <!-- ================= HELLO + STATISTIK + MAU MULAI (kode) ================= -->
+  <section class="hello">
+    <div class="hello-row">
+      <img class="kartun" src="/mia-kartun.png" alt="Mia">
+      <div>
+        <div class="script">Hello</div>
+        <div class="mia">Aku Mia . . . .</div>
+        <div class="dg"><span>2 Digit Pertamaku</span> aku raih dari produk Digital</div>
+      </div>
+    </div>
+
+    <div class="dash"><div class="dash-in">
+      <div class="dash-top"><span class="tt">Total Views &amp; Clicks</span><span class="dt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Select Date..</span></div>
+      <div class="legend">
+        <div><i style="background:#f6a62d"></i>Views<b>1.046</b></div>
+        <div><i style="background:#19a774"></i>Clicks<b>333</b></div>
+      </div>
+      <div class="chart">
+        <div class="yax"><span>250</span><span>200</span><span>150</span><span>100</span><span>50</span><span>0</span></div>
+        <div class="bars"><div class="c"><div class="b" style="height:1.2%"><i style="height:33%"></i></div></div><div class="c"><div class="b" style="height:6.4%"><i style="height:25%"></i></div></div><div class="c"><div class="b" style="height:7.2%"><i style="height:33%"></i></div></div><div class="c"><div class="b" style="height:5.6%"><i style="height:36%"></i></div></div><div class="c"><div class="b" style="height:23.2%"><i style="height:31%"></i></div></div><div class="c"><div class="b" style="height:0.0%"></div></div><div class="c"><div class="b" style="height:2.8%"><i style="height:43%"></i></div></div><div class="c"><div class="b" style="height:8.0%"><i style="height:40%"></i></div></div><div class="c"><div class="b" style="height:0.8%"><i style="height:0%"></i></div></div><div class="c"><div class="b" style="height:11.6%"><i style="height:34%"></i></div></div><div class="c"><div class="b" style="height:1.2%"><i style="height:33%"></i></div></div><div class="c"><div class="b" style="height:3.6%"><i style="height:44%"></i></div></div><div class="c"><div class="b" style="height:58.0%"><i style="height:23%"></i></div></div><div class="c"><div class="b" style="height:5.2%"><i style="height:31%"></i></div></div><div class="c"><div class="b" style="height:57.2%"><i style="height:8%"></i></div></div><div class="c"><div class="b" style="height:46.8%"><i style="height:9%"></i></div></div><div class="c"><div class="b" style="height:16.0%"><i style="height:25%"></i></div></div><div class="c"><div class="b" style="height:78.8%"><i style="height:23%"></i></div></div><div class="c"><div class="b" style="height:41.6%"><i style="height:12%"></i></div></div><div class="c"><div class="b" style="height:18.0%"><i style="height:27%"></i></div></div><div class="c"><div class="b" style="height:55.2%"><i style="height:23%"></i></div></div><div class="c"><div class="b" style="height:86.8%"><i style="height:29%"></i></div></div></div>
+      </div>
+      <div class="xax"><span>27<br>Sep</span><span>28<br>Sep</span><span>29<br>Sep</span><span>30<br>Sep</span><span>1<br>Oct</span><span>2<br>Oct</span><span>3<br>Oct</span><span>4<br>Oct</span><span>5<br>Oct</span><span>6<br>Oct</span><span>7<br>Oct</span><span>8<br>Oct</span><span>9<br>Oct</span><span>10<br>Oct</span><span>11<br>Oct</span><span>12<br>Oct</span><span>13<br>Oct</span><span>14<br>Oct</span><span>15<br>Oct</span><span>16<br>Oct</span><span>17<br>Oct</span><span>18<br>Oct</span></div>
+      <div class="tiles">
+        <div class="tile"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><div><small>Lifetime Sales (IDR)</small><b>23,347,220</b></div></div>
+        <div class="tile"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="4" width="16" height="6.500" rx="2"/><rect x="4" y="13.500" width="16" height="6.500" rx="2"/></svg></span><div><small>My Blocks</small><b>66</b></div></div>
+        <div class="tile"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="8" r="3.500"/><path d="M2.500 20c.5-4 3-6 6.500-6s6 2 6.500 6M16 4.500a3.500 3.500 0 0 1 0 7M18.500 14.500c1.800.8 2.800 2.500 3 5"/></svg></span><div><small>Affiliate Products</small><b>7</b></div></div>
+        <div class="tile"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M5 7h14l1 13H4z"/><path d="M9 10V6a3 3 0 0 1 6 0v4" stroke-linecap="round"/></svg></span><div><small>Lifetime Orders</small><b>250</b></div></div>
+      </div>
+    </div></div>
+
+    <div class="mm">
+      <h2 class="h2">Mau Mulai, tapi <span class="l">Bingung<br>Harus dari Mana?</span></h2>
+      <div class="think">Mungkin kamu sedang berpikir...</div>
+      <ul class="qs">
+        <li><svg viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M5 10c0-4.500 3.200-7 7-7s7 2.500 7 6.500c0 3.500-2.500 5-4.500 6.500-1.500 1.200-2.500 2.200-2.500 4.500"/><circle cx="12" cy="28" r="1" fill="currentColor"/></svg><span>“Aku harus bikin produk apa, ya?”</span></li>
+        <li><svg viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M5 10c0-4.500 3.200-7 7-7s7 2.500 7 6.500c0 3.500-2.500 5-4.500 6.500-1.500 1.200-2.500 2.200-2.500 4.500"/><circle cx="12" cy="28" r="1" fill="currentColor"/></svg><span>“Aku belum jago Canva.”</span></li>
+        <li><svg viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M5 10c0-4.500 3.200-7 7-7s7 2.500 7 6.500c0 3.500-2.500 5-4.500 6.500-1.500 1.200-2.500 2.200-2.500 4.500"/><circle cx="12" cy="28" r="1" fill="currentColor"/></svg><span>“Gimana cara jualannya?”</span></li>
+        <li><svg viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M5 10c0-4.500 3.200-7 7-7s7 2.500 7 6.500c0 3.500-2.500 5-4.500 6.500-1.500 1.200-2.500 2.200-2.500 4.500"/><circle cx="12" cy="28" r="1" fill="currentColor"/></svg><span>“Kalau nanti aku buntu, gimana?”</span></li>
+        <li><svg viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M5 10c0-4.500 3.200-7 7-7s7 2.500 7 6.500c0 3.500-2.500 5-4.500 6.500-1.500 1.200-2.500 2.200-2.500 4.500"/><circle cx="12" cy="28" r="1" fill="currentColor"/></svg><span>“Terus, cara promosinya gimana?”</span></li>
+      </ul>
+      <div class="sure">Kamu nggak harus tahu semuanya<br>sebelum mulai.</div>
+      <div class="just">Kamu hanya perlu tahu<br>harus mulai dari mana.</div>
+    </div>
+  </section>
 
   <!-- 2. Tombol -->
   <div class="btn-wrap"><a class="btn" href="https://lynk.id/mialynna" target="_blank" rel="noopener">KURSUS GRATIS →</a></div>
@@ -161,18 +313,22 @@
   <p class="note">Aku Ibu Anak 1 (Toddler). Aku buktikan kalau IRT yang Fulltime dirumah aja dan tinggal di kampung tetap bisa punya penghasilan tanpa ninggalin anak. Dan dengan keterbatasan aku menghasilkan <b>10JUTA</b> hanya dengan Worksheet dan Game Edukatif Anak.</p>
   <p class="swipe">Produk Best Seller Geser kesamping →</p>
 
+  <div class="car-wrap">
   <div class="carousel" id="carousel">
     <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792029942235_5411413.png?width=630&quality=90&format=webp" alt="Bukti 1" loading="lazy"></div>
     <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792030030700_7277529.png?width=630&quality=90&format=webp" alt="Bukti 2" loading="lazy"></div>
     <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792030056790_5693879.png?width=630&quality=90&format=webp" alt="Bukti 3" loading="lazy"></div>
     <div class="slide"><img src="https://cdn.lynkid.my.id/draft-products/15-10-2026/1792030082708_8057883.png?width=630&quality=90&format=webp" alt="Bukti 4" loading="lazy"></div>
   </div>
+  <button class="car-btn prev off" id="prev" aria-label="Sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="car-btn next" id="next" aria-label="Berikutnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
   <div class="dots" id="dots"></div>
 
   <!-- Tombol Mega Bundling -->
   <div class="btn-wrap">
     <div class="promo-box">
-      <span class="t">MEGA BUNDLING WORKSHEET ANAK</span>
+      <span class="t">MEGA BUNDLING WORKSHEET ANAK 4000+ HAL</span>
       <span class="p">PROMO dari <s>249K</s> terbatas untuk 5 orang aja jadi 69K aja!</span>
       <span class="b">BONUS 150 File PDF Worksheet Anak, 9 Games Edukatif, Cara Buka toko digital dan Cara Promosi</span>
       <a class="go" href="https://lynk.id/mialynna/mgxweorw50xm" target="_blank" rel="noopener">Ambil Promo →</a>
@@ -184,7 +340,16 @@
   <div class="btn-wrap"><a class="btn" href="https://testimonievegrowdigital.vercel.app/" target="_blank" rel="noopener">LIHAT TESTIMONI LEBIH BANYAK →</a></div>
 
   <!-- 6. Gambar penjelasan -->
-  <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792346810139_8803319.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <!-- ================= ABOUT ME (kode) ================= -->
+  <section class="about">
+    <h2 class="h2">About Me</h2>
+    <div class="polaroid"><span class="tape"></span><img src="/foto-mia.jpg" alt="Mia"></div>
+    <p class="txt">Hai, Aku Mia! 👋<br>
+      Aku membuat Evegrow Digital untuk membantu kamu memulai bisnis produk digital dengan lebih mudah.<br>
+      Aku tahu banyak orang ingin punya penghasilan tambahan atau bisnis yang fleksibel, tapi masih bingung harus mulai dari mana, apa yang harus dipelajari, dan bagaimana cara membuat serta menjual produk digital.<br>
+      Karena itu, aku menyediakan E-course yang ramah untuk pemula, panduan praktis, dan berbagai sumber belajar agar prosesnya terasa lebih mudah, kamu juga bisa sharing private 1:1 via WA chat bareng aku dan bedah akun.<br>
+      Baik kamu seorang ibu rumah tangga, karyawan, orang tua, calon pebisnis, atau sudah mulai jualan tapi masih butuh arahan, Evegrow Digital siap menemani perjalananmu untuk belajar, berkarya, dan berkembang darimanapun. ♡</p>
+  </section>
   <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792345934745_1946985.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
   <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792345969482_6186745.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
 
@@ -227,10 +392,16 @@
   const c = document.getElementById('carousel'), d = document.getElementById('dots');
   const n = c.children.length;
   for (let i = 0; i < n; i++) d.appendChild(document.createElement('i'));
+  const prev = document.getElementById('prev'), next = document.getElementById('next');
   const upd = () => {
     const i = Math.round(c.scrollLeft / c.clientWidth);
     [...d.children].forEach((el, k) => el.classList.toggle('on', k === i));
+    prev.classList.toggle('off', i <= 0);
+    next.classList.toggle('off', i >= n - 1);
+    prev.classList.toggle('pulse', i > 0 && i >= n - 1);
   };
+  prev.addEventListener('click', () => c.scrollBy({left: -c.clientWidth, behavior: 'smooth'}));
+  next.addEventListener('click', () => c.scrollBy({left:  c.clientWidth, behavior: 'smooth'}));
   c.addEventListener('scroll', upd, {passive:true}); upd();
 
   // Kupu-kupu terbang aesthetic (ungu brand): melayang halus, berbelok lembut, ada jejak glitter
@@ -314,4 +485,15 @@
         b.el.style.transform = `translate3d(${b.x}px,${b.y}px,0) rotate(${b.th*180/Math.PI + 90 + roll}deg)`;
         // kepakan sayap: kadang cepat, kadang melayang pelan
         const g = .5 + .5*Math.sin(b.t*.8 + b.glide);
-        b.el.style.setProperty('--f', (b.f + g*.28).toFixed(2)+'
+        b.el.style.setProperty('--f', (b.f + g*.28).toFixed(2)+'s');
+        // jejak glitter
+        b.sp += dt;
+        if (b.sp > .16){ b.sp = 0; if (box.childElementCount < 70) sparkle(b); }
+      });
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+</script>
+</body>
+</html>

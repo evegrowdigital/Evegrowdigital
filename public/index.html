@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Serif+Display&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#e3d6fd; --card:#F5F0FF; --line:#E4D4FA;
@@ -231,6 +231,83 @@
   .car-btn.off{opacity:0;pointer-events:none}
   @keyframes nudgeR{0%,100%{transform:translateY(-50%) translateX(0)}50%{transform:translateY(-50%) translateX(6px)}}
   @keyframes nudgeL{0%,100%{transform:translateY(-50%) translateX(0)}50%{transform:translateY(-50%) translateX(-6px)}}
+
+  /* ================= AESTHETIC UPGRADE ================= */
+  .wave{line-height:0;margin-bottom:-1px}
+  .wave svg{display:block;width:100%;height:min(9vw,46px)}
+
+  /* hero */
+  .hero{background:radial-gradient(130% 55% at 50% 0%,#ffffff 0%,#f6f1fe 45%,#efe6fc 100%);position:relative}
+  .hero::before,.hero::after{content:"✦";position:absolute;color:#c9a9ec;font-size:18px;opacity:.7;pointer-events:none}
+  .hero::before{left:9%;top:16%}
+  .hero::after{right:8%;top:30%;font-size:13px}
+  .photo-wrap{isolation:isolate}
+  .photo-wrap::before{content:"";position:absolute;inset:0;border:2px solid #c9a9ec;border-radius:999px 999px 0 0;transform:translate(5%,3%);z-index:-1}
+  .photo-wrap .arch{box-shadow:0 22px 44px -20px rgba(91,45,145,.6)}
+  .fcard{padding:4cqw 4cqw 3.6cqw;border-radius:4.5cqw;box-shadow:0 14px 28px -12px rgba(91,45,145,.45)}
+  .fcard b{font-size:4.2cqw}
+  .fcard p{font-size:3.35cqw;line-height:1.25}
+  .fcard.fl{left:-25cqw;top:3%;width:50cqw}
+  .fcard.fr{left:74cqw;top:46%;width:47cqw}
+  .socials{position:relative;z-index:3}
+  .socials a{display:grid;place-items:center;width:min(12.5vw,58px);height:min(12.5vw,58px);border-radius:50%;background:#fff;color:#34248a;
+             box-shadow:0 10px 20px -10px rgba(91,45,145,.55)}
+  .socials svg{width:52%;height:52%}
+
+  /* hello + statistik menyatu */
+  .hello{position:relative}
+  .hello-row .kartun{-webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 80%,transparent);position:relative;z-index:1}
+  .stat{position:relative;z-index:2;margin-top:calc(-1 * min(7vw,36px));border-radius:14px;box-shadow:0 18px 34px -16px rgba(91,45,145,.5)}
+
+  /* mau mulai */
+  .qs{background:rgba(255,255,255,.38);border-radius:20px;padding:min(3.5vw,18px) min(4.5vw,22px);width:88%;box-shadow:0 10px 26px -16px rgba(91,45,145,.4)}
+  .mm .just{background:linear-gradient(90deg,#a45fd1,#6f3bc0);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* about */
+  .polaroid{transform:rotate(-2deg);box-shadow:0 14px 28px -12px rgba(0,0,0,.35)}
+  .about .txt{background:rgba(255,255,255,.55);border-radius:22px;margin:min(8vw,44px) 5% 0;padding:min(5vw,26px) 6%;box-shadow:0 10px 26px -18px rgba(91,45,145,.45)}
+
+  /* ---------- Aku pernah ada difase ---------- */
+  .fase{background:#e3d6fd;padding:min(5vw,28px) 4% min(8vw,40px);overflow:hidden}
+  .fase-head{position:relative;text-align:right;padding-right:15%}
+  .rt{font-family:'Fredoka',sans-serif;font-weight:600;font-size:min(5.4vw,29px);letter-spacing:-.01em;
+      background:linear-gradient(90deg,#8b4fd0,#4b2190);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .fase-head .loop{position:absolute;right:2%;top:22%;width:min(11vw,52px);height:auto;z-index:3}
+  .fase-wrap{position:relative;margin-top:min(3vw,14px)}
+  .fase-box{margin-left:20%;width:72%;border-radius:22px;padding:min(3.6vw,18px) min(3vw,14px);background:#b693e0;border:2.5px dashed #ecdffc;
+            box-shadow:0 18px 34px -18px rgba(91,45,145,.6);display:flex;flex-direction:column;gap:min(2.4vw,11px)}
+  .pill{display:flex;align-items:center;gap:9px;background:#fcf5ee;border-radius:16px;padding:min(2.6vw,12px) min(3.2vw,14px);
+        font-family:'Fredoka',sans-serif;font-weight:600;font-size:min(3.1vw,15px);line-height:1.22;color:#4b2190;box-shadow:0 2px 0 rgba(91,45,145,.15)}
+  .pill i{flex:none;width:9px;height:9px;border-radius:50%;background:#5b2d91}
+  .fase-box .pill:nth-child(n+3){padding-right:min(17vw,76px)}
+  .qq{position:absolute;left:2%;top:4%;font-family:'Fredoka',sans-serif;font-weight:700;font-size:min(7vw,34px);color:#b79ddc;transform:rotate(-12deg);letter-spacing:-.05em}
+  .g-left{position:absolute;left:0;top:14%;width:22%;height:auto;z-index:2}
+  .g-right{position:absolute;right:-3%;bottom:-2%;width:31%;height:auto;z-index:2}
+  .scribble{position:absolute;right:-1%;top:15%;width:min(17vw,80px);height:auto;z-index:3;transform:rotate(6deg)}
+  .sampai{margin:min(6vw,30px) 0 0;text-align:center;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:min(4.6vw,26px);color:#4a3a66;line-height:1.2}
+  .sampai b{display:block;font-weight:500;letter-spacing:.02em;color:#8a55cf;font-size:min(5.4vw,31px)}
+
+  .why-title{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;width:min(76%,380px);margin:min(8vw,40px) auto 0;
+             background:#fcf5ee;border:2.5px solid #7b3fc4;border-radius:22px;padding:min(3.4vw,16px) min(4vw,20px);
+             box-shadow:0 12px 24px -14px rgba(91,45,145,.55)}
+  .why-title::after{content:"";position:absolute;right:12%;bottom:-11px;width:18px;height:18px;background:#fcf5ee;border-right:2.5px solid #7b3fc4;border-bottom:2.5px solid #7b3fc4;border-bottom-right-radius:4px;transform:rotate(45deg)}
+  .why-title span{font-family:'Fredoka',sans-serif;font-weight:600;font-size:min(5vw,26px);line-height:1.1;color:#4b2190;text-align:center}
+  .why-title b{display:block;font-weight:700;color:#2f1670;font-size:min(5.6vw,29px)}
+  .why-title em{font-family:'Fredoka',sans-serif;font-style:normal;font-weight:700;font-size:min(11vw,52px);color:#7b3fc4;line-height:1}
+  .why-wrap{position:relative;margin-top:min(6vw,30px)}
+  .why-box{width:68%;margin-left:2%;border-radius:22px;padding:min(3.6vw,18px) min(3vw,14px);background:#b693e0;border:2.5px dashed #ecdffc;
+           box-shadow:0 18px 34px -18px rgba(91,45,145,.6);display:flex;flex-direction:column;gap:min(2.4vw,11px)}
+  .pill.w{padding-right:min(5vw,22px)}
+  .wi{flex:none;display:grid;place-items:center;width:min(8vw,36px);height:min(8vw,36px);border-radius:50%;background:linear-gradient(145deg,#efe4fb,#d9c3f5);color:#6a2fb0}
+  .wi svg{width:56%;height:56%}
+  .g-point{position:absolute;right:-5%;bottom:0;width:41%;height:auto;z-index:2}
+
+  .faq-badge{position:relative;width:min(36vw,170px);height:min(25vw,118px);margin:min(8vw,40px) auto 0}
+  .faq-badge .b1,.faq-badge .b2{position:absolute;border-radius:20px}
+  .faq-badge .b2{right:0;bottom:0;width:64%;height:58%;background:linear-gradient(145deg,#b48be6,#8554cf);box-shadow:0 12px 22px -10px rgba(91,45,145,.6)}
+  .faq-badge .b1{left:0;top:0;width:82%;height:72%;display:grid;place-items:center;background:linear-gradient(160deg,#ffffff,#ece3fb);
+                 font-family:'Fredoka',sans-serif;font-weight:700;font-size:min(10vw,48px);color:#8d6ad0;box-shadow:0 12px 22px -10px rgba(91,45,145,.55);z-index:1}
+  .faq-badge .b1::after{content:"";position:absolute;left:14%;bottom:-9px;width:18px;height:18px;background:#ece3fb;transform:rotate(45deg) skew(10deg,10deg);border-radius:3px}
 </style>
 </head>
 <body>
@@ -238,7 +315,7 @@
 
   <!-- ================= HERO (kode) ================= -->
   <section class="hero">
-    <img class="logo" src="/logo.png" alt="Evegrow Digital">
+    <img class="logo" onerror="this.style.display='none'" src="/logo.png" alt="Evegrow Digital">
     <div class="brand">EVEGROW DIGITAL</div>
     <h1 class="h1"><span class="d">Dari Rumah<br>Tetap Bisa</span><br><span class="l">Berpenghasilan</span></h1>
 
@@ -249,17 +326,18 @@
     </div>
 
     <div class="socials">
-      <a href="https://wa.me/6285750232420?text=Halo%20kak,%20aku%20mau%20tanya" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="13" r="12.2" fill="currentColor"/><path d="M2.4 26.2 4.6 18.2l5.8 4.4z" fill="currentColor"/><g transform="translate(4.2 3.2) scale(.8)" fill="#f4effd"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></g></svg></a>
+      <a href="https://wa.me/6285750232420?text=Halo%20kak,%20aku%20mau%20tanya" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="13" r="12.2" fill="currentColor"/><path d="M2.4 26.2 4.6 18.2l5.8 4.4z" fill="currentColor"/><g transform="translate(4.2 3.2) scale(.8)" fill="#fff"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></g></svg></a>
       <a href="https://www.instagram.com/evegrow.digital" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" aria-hidden="true"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5.4"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
       <a href="https://www.tiktok.com/@evegrowdigital" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
       <a href="https://www.threads.com/@evegrow.digital" target="_blank" rel="noopener" aria-label="Threads"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 00-2.215-.221z"/></svg></a>
     </div>
   </section>
 
+  <div class="wave" style="background:#f4effd"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 45C200 95 420 0 720 38s520 60 720 8V90H0z" fill="#e3d6fd"/></svg></div>
   <!-- ================= HELLO + STATISTIK + MAU MULAI (kode) ================= -->
   <section class="hello">
     <div class="hello-row">
-      <img class="kartun" src="/mia-kartun.png" alt="Mia">
+      <img class="kartun" onerror="this.style.display='none'" src="/mia-kartun.png" alt="Mia">
       <div>
         <div class="script">Hello</div>
         <div class="mia">Aku Mia . . . .</div>
@@ -326,6 +404,7 @@
   <div class="btn-wrap"><a class="btn" href="https://testimonievegrowdigital.vercel.app/" target="_blank" rel="noopener">LIHAT TESTIMONI LEBIH BANYAK →</a></div>
 
   <!-- 6. Gambar penjelasan -->
+  <div class="wave" style="background:#e3d6fd"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 45C200 95 420 0 720 38s520 60 720 8V90H0z" fill="#f4effd"/></svg></div>
   <!-- ================= ABOUT ME (kode) ================= -->
   <section class="about">
     <h2 class="h2">About Me</h2>
@@ -336,8 +415,47 @@
       Karena itu, aku menyediakan E-course yang ramah untuk pemula, panduan praktis, dan berbagai sumber belajar agar prosesnya terasa lebih mudah, kamu juga bisa sharing private 1:1 via WA chat bareng aku dan bedah akun.<br>
       Baik kamu seorang ibu rumah tangga, karyawan, orang tua, calon pebisnis, atau sudah mulai jualan tapi masih butuh arahan, Evegrow Digital siap menemani perjalananmu untuk belajar, berkarya, dan berkembang darimanapun. ♡</p>
   </section>
-  <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792345934745_1946985.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
-  <img src="https://cdn.lynkid.my.id/draft-products/19-10-2026/1792345969482_6186745.png?width=630&quality=90&format=webp" alt="Gambar" loading="lazy">
+  <div class="wave" style="background:#f4effd"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 45C200 95 420 0 720 38s520 60 720 8V90H0z" fill="#e3d6fd"/></svg></div>
+
+  <!-- ================= AKU PERNAH ADA DIFASE (kode) ================= -->
+  <section class="fase">
+    <div class="fase-head">
+      <h2 class="rt">Aku pernah ada difase</h2>
+      <svg class="loop" viewBox="0 0 60 70" fill="none" stroke="#7b3fc4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8C34 2 56 18 46 34 40 44 26 38 32 28 38 20 50 28 42 56"/><path d="M42 56l-9-8M42 56l10-6"/></svg>
+    </div>
+    <div class="fase-wrap">
+      <span class="qq">???</span>
+      <img class="g-left" onerror="this.style.display='none'" src="/kartun-mikir.png" alt="">
+      <div class="fase-box">
+        <div class="pill"><i></i><span>Khawatir Anak Kecanduan YouTube (Screen Time Pasif)</span></div>
+        <div class="pill"><i></i><span>Bingung cari Aktivitas Edukatif Buat Anak</span></div>
+        <div class="pill"><i></i><span>Sebagai Single Mom Aku Bingung mikirin biaya hidup</span></div>
+        <div class="pill"><i></i><span>Pusing mikirin Hutang dan Tagihan tiap bulan</span></div>
+        <div class="pill"><i></i><span>Mau kerja tapi berat banget mau ninggalin anak</span></div>
+        <div class="pill"><i></i><span>Ingin bantu keuangan keluarga</span></div>
+        <div class="pill"><i></i><span>Bingung harus apa dan mulai dari mana?</span></div>
+      </div>
+      <svg class="scribble" viewBox="0 0 60 46"><path d="M8 4h44a6 6 0 0 1 6 6v18a6 6 0 0 1-6 6H24l-10 9v-9H8a6 6 0 0 1-6-6V10a6 6 0 0 1 6-6z" fill="#fff" stroke="#6a2fb0" stroke-width="2"/><path d="M14 22c4-10 12-12 18-8s0 14-8 12-6-12 2-12 18 4 20 12" fill="none" stroke="#3b1d7a" stroke-width="1.400" stroke-linecap="round"/></svg>
+      <img class="g-right" onerror="this.style.display='none'" src="/kartun-pusing.png" alt="">
+    </div>
+    <p class="sampai">Sampai akhirnya aku belajar<b>BISNIS PRODUK DIGITAL</b></p>
+
+    <div class="why-title"><span>Kenapa harus<b>PRODUK DIGITAL</b></span><em>?</em></div>
+    <div class="why-wrap">
+      <div class="why-box">
+        <div class="pill w"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6.500A1.500 1.500 0 0 1 4.500 5H16"/><circle cx="16.500" cy="13.500" r="1.200" fill="currentColor"/></svg></span><span>Modal Awal Relatif Kecil, Bahkan Bisa Rp 0</span></div>
+        <div class="pill w"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v10l-8 4-8-4V7z"/><path d="M4 7l8 4 8-4M12 11v10"/><path d="M3 3l18 18" stroke-width="2.4"/></svg></span><span>Tidak Perlu Stock Barang</span></div>
+        <div class="pill w"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l3 3-3 3M20 5H8a4 4 0 0 0-4 4v1M7 22l-3-3 3-3M4 19h12a4 4 0 0 0 4-4v-1"/></svg></span><span>Satu Produk Bisa Dijual Berkali-kali</span></div>
+        <div class="pill w"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7M5 10v10h14V10"/><path d="M12 17.500s-3-1.800-3-3.800a1.700 1.700 0 0 1 3-1 1.700 1.700 0 0 1 3 1c0 2-3 3.800-3 3.800z"/></svg></span><span>Fleksibel, Bisa dari Rumah</span></div>
+        <div class="pill w"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.500 3.500 3.500 14.500 0 18M12 3c-3.500 3.500-3.500 14.500 0 18"/></svg></span><span>Menjangkau Pelanggan Lebih Luas</span></div>
+        <div class="pill w"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.900 5.100L18 10l-5.100 1.900L11 17l-1.900-5.100L4 10l5.100-1.900z"/><path d="M19 15l.8 2.200 2.200.8-2.200.8L19 21l-.8-2.200-2.200-.8 2.200-.8z"/></svg></span><span>Bisa Dibantu Teknologi AI</span></div>
+        <div class="pill w"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V13M10 20V9M16 20v-6M22 20V5"/><path d="M3 20h19"/></svg></span><span>Berpotensi Menjadi Aset Bisnis Jangka panjang</span></div>
+      </div>
+      <img class="g-point" onerror="this.style.display='none'" src="/kartun-nunjuk.png" alt="">
+    </div>
+    <div class="faq-badge" aria-hidden="true"><span class="b2"></span><span class="b1">FAQ</span></div>
+  </section>
+
 
   <!-- 7. FAQ -->
   <section class="faq">
